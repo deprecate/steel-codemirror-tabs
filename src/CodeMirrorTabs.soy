@@ -8,5 +8,29 @@
  */
 {template .content}
 	<div id="{$id}" class="codeMirrorTabs component{$elementClasses ? ' ' + $elementClasses : ''}">
+		{call .header data="all" /}
+		<textarea></textarea>
+	</div>
+{/template}
+
+/**
+ * @param? extraHeaderContent
+ * @param id
+ * @param tabs
+ * @param? selectedTabIndex
+ */
+{template .header}
+	<div id="{$id}-header" class="codeMirrorTabs-header">
+		{let $selectedIndex: $selectedTabIndex ? $selectedTabIndex : 0 /}
+		{foreach $tab in $tabs}
+			<button
+				class="codeMirrorTabs-tab{$selectedIndex == index($tab) ? ' codeMirrorTabs-tab-selected' : ''} btn-transparent"
+				data-index="{index($tab)}"
+				type="button"
+				data-onclick="handleTabClick_">
+				{$tab}
+			</button>
+		{/foreach}
+		{isNonnull($extraHeaderContent) ? $extraHeaderContent : ''}
 	</div>
 {/template}

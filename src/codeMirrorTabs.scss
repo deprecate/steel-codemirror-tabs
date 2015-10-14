@@ -1,2 +1,40 @@
+@import "steel-bootstrap/src/variables";
+@import "steel-bootstrap/src/mixins";
+
+/* Code Mirror Tabs
+	 ========================================================================== */
+
 .codeMirrorTabs {
+	border: 1px solid rgba($brand-primary, .2);
+	border-radius: $border-radius-base;
+	padding: 20px 0 0;
+}
+
+.codeMirrorTabs-header {
+	border-bottom: 1px solid rgba($primary, .2);
+}
+
+.codeMirrorTabs-tab {
+	@include anim(color);
+	color: rgba($primary, .6);
+	font-family: $font-family-secondary;
+	font-size: 11px;
+	font-weight: 700;
+	margin: 0 0 20px 30px;
+	text-transform: uppercase;
+}
+
+.codeMirrorTabs-tab:hover,
+.codeMirrorTabs-tab:focus {
+	color: $primary;
+}
+
+.codeMirrorTabs-tab-selected,
+.codeMirrorTabs-tab-selected:hover,
+.codeMirrorTabs-tab-selected:focus {
+	color: $accent;
+}
+
+.codeMirrorTabs .CodeMirror {
+	border: none;
 }
