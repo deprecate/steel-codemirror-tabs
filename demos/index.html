@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo: CodeMirrorTabs</title>
+
+	<link rel="stylesheet" href="../bower_components/steel-bootstrap/build/bootstrap.css">
+	<link rel="stylesheet" href="../bower_components/steel-bootstrap/build/fonts/icon-12.css">
+	<link rel="stylesheet" href="../bower_components/steel-bootstrap/build/fonts/icon-16.css">
+	<link rel="stylesheet" href="../bower_components/codemirror/lib/codemirror.css">
+
+	<script src="../bower_components/soyutils/soyutils.js"></script>
+	<script src="../bower_components/codemirror/lib/codemirror.js"></script>
+	<script src="../bower_components/codemirror/addon/display/placeholder.js"></script>
+	<script src="../bower_components/codemirror/mode/javascript/javascript.js"></script>
+	<script src="../build/globals/codeMirrorTabs.js"></script>
+</head>
+<body>
+	<h1>CodeMirrorTabs</h1>
+	<script type="text/javascript">
+		window.codeMirrorTabs = new steel.CodeMirrorTabs({
+			config: {
+				lineNumbers: true
+			},
+			tabContents: [
+				'My JavaScript content',
+				'My Java content'
+			],
+			tabs: ['JavaScript', 'Java']
+		}).render();
+	</script>
+</body>
+</html>
