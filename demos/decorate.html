@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo: CodeMirrorTabs</title>
+
+	<link rel="stylesheet" href="../bower_components/steel-bootstrap/build/bootstrap.css">
+	<link rel="stylesheet" href="../bower_components/steel-bootstrap/build/fonts/icon-12.css">
+	<link rel="stylesheet" href="../bower_components/steel-bootstrap/build/fonts/icon-16.css">
+	<link rel="stylesheet" href="../bower_components/codemirror/lib/codemirror.css">
+	<link rel="stylesheet" href="../build/codeMirrorTabs.css">
+
+	<script src="../bower_components/soyutils/soyutils.js"></script>
+	<script src="../bower_components/codemirror/lib/codemirror.js"></script>
+	<script src="../bower_components/codemirror/addon/display/placeholder.js"></script>
+	<script src="../bower_components/codemirror/mode/javascript/javascript.js"></script>
+	<script src="../bower_components/codemirror/mode/css/css.js"></script>
+	<script src="../build/globals/codeMirrorTabs.js"></script>
+</head>
+<body>
+	<h1>CodeMirrorTabs</h1>
+	<div id="tabs" class="codeMirrorTabs component">
+		<div id="tabs-header" class="codeMirrorTabs-header">
+			<button
+				class="codeMirrorTabs-tab codeMirrorTabs-tab-selected btn-transparent"
+				data-index="0"
+				type="button"
+				data-onclick="handleTabClick_">
+				JavaScript
+			</button>
+			<button
+				class="codeMirrorTabs-tab btn-transparent"
+				data-index="1"
+				type="button"
+				data-onclick="handleTabClick_">
+				CSS
+			</button>
+		</div>
+		<textarea></textarea>
+	</div>
+	<script type="text/javascript">
+		window.codeMirrorTabs = new steel.CodeMirrorTabs({
+			element: '#tabs',
+			tabConfigs: [
+				{
+					lineNumbers: true,
+					mode: 'javascript',
+					value: 'var name = \'JavaScript\';'
+				},
+				{
+					lineNumbers: true,
+					mode: 'css',
+					value: '.css {\n  display: block;\n}'
+				}
+			],
+			tabs: ['JavaScript', 'CSS']
+		}).decorate();
+	</script>
+</body>
+</html>
