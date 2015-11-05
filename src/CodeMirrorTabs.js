@@ -2,8 +2,7 @@
 
 import core from 'bower:metal/src/core';
 import CodeMirror from 'bower:steel-codemirror/src/CodeMirror';
-import ComponentRegistry from 'bower:metal/src/component/ComponentRegistry';
-import './CodeMirrorTabs.soy';
+import CodeMirrorTabsBase from './CodeMirrorTabs.soy';
 
 /**
  * A CodeMirror editor with tabs.
@@ -76,6 +75,6 @@ CodeMirrorTabs.ATTRS = {
  */
 CodeMirrorTabs.ELEMENT_CLASSES = 'codeMirrorTabs';
 
-ComponentRegistry.register('CodeMirrorTabs', CodeMirrorTabs);
+CodeMirrorTabsBase.setImpl(CodeMirrorTabs);
 
 export default CodeMirrorTabs;
