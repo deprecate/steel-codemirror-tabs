@@ -1,6 +1,5 @@
 /* jshint ignore:start */
 import Component from 'bower:metal/src/component/Component';
-import ComponentRegistry from 'bower:metal/src/component/ComponentRegistry';
 import SoyAop from 'bower:metal/src/soy/SoyAop';
 import SoyRenderer from 'bower:metal/src/soy/SoyRenderer';
 import SoyTemplates from 'bower:metal/src/soy/SoyTemplates';
@@ -56,13 +55,8 @@ if (goog.DEBUG) {
 Templates.CodeMirrorTabs.content.params = ["id"];
 Templates.CodeMirrorTabs.header.params = ["extraHeaderContent","id","tabs","selectedTabIndex"];
 
-class CodeMirrorTabs extends Component {
-  static setImpl(ctor) {
-    ComponentRegistry.register(ctor, 'CodeMirrorTabs');
-  }
-}
+class CodeMirrorTabs extends Component {}
 CodeMirrorTabs.RENDERER = SoyRenderer;
-CodeMirrorTabs.setImpl(CodeMirrorTabs);
 SoyAop.registerTemplates('CodeMirrorTabs');
 export default CodeMirrorTabs;
 /* jshint ignore:end */
