@@ -2,7 +2,7 @@
 	"name": "steel-codeMirrorTabs",
 	"version": "0.0.0",
 	"description": "Steel's component for a CodeMirror editor with tabs",
-	"license": "MIT",
+	"license": "BSD",
 	"repository": "metal/steel-codeMirrorTabs",
 	"engines": {
 		"node": ">=0.12.0"
