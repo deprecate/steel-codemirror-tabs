@@ -21,11 +21,11 @@ if (typeof Templates.CodeMirrorTabs == 'undefined') { Templates.CodeMirrorTabs =
  * @return {!soydata.SanitizedHtml}
  * @suppress {checkTypes}
  */
-Templates.CodeMirrorTabs.content = function(opt_data, opt_ignored, opt_ijData) {
+Templates.CodeMirrorTabs.render = function(opt_data, opt_ignored, opt_ijData) {
   return soydata.VERY_UNSAFE.ordainSanitizedHtml('<div id="' + soy.$$escapeHtmlAttribute(opt_data.id) + '" class="codeMirrorTabs component' + soy.$$escapeHtmlAttribute(opt_data.elementClasses ? ' ' + opt_data.elementClasses : '') + '">' + Templates.CodeMirrorTabs.header(opt_data, null, opt_ijData) + '<textarea></textarea></div>');
 };
 if (goog.DEBUG) {
-  Templates.CodeMirrorTabs.content.soyTemplateName = 'Templates.CodeMirrorTabs.content';
+  Templates.CodeMirrorTabs.render.soyTemplateName = 'Templates.CodeMirrorTabs.render';
 }
 
 
@@ -52,7 +52,7 @@ if (goog.DEBUG) {
   Templates.CodeMirrorTabs.header.soyTemplateName = 'Templates.CodeMirrorTabs.header';
 }
 
-Templates.CodeMirrorTabs.content.params = ["id"];
+Templates.CodeMirrorTabs.render.params = ["id"];
 Templates.CodeMirrorTabs.header.params = ["extraHeaderContent","id","tabs","selectedTabIndex"];
 
 class CodeMirrorTabs extends Component {}
