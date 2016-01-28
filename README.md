@@ -16,7 +16,6 @@ Steel's component for a CodeMirror editor with tabs
 
   ```
   npm install
-  bower install
   ```
 
 4. Build the code:

@@ -1,7 +1,7 @@
 'use strict';
 
-import core from 'bower:metal/src/core';
-import CodeMirror from 'bower:steel-codemirror/src/CodeMirror';
+import core from 'metal/src/core';
+import CodeMirror from 'steel-codemirror/src/CodeMirror';
 import './CodeMirrorTabs.soy';
 
 /**
