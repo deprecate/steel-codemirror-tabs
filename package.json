@@ -1,9 +1,9 @@
 {
-	"name": "steel-codeMirrorTabs",
+	"name": "steel-codemirror-tabs",
 	"version": "0.0.0",
 	"description": "Steel's component for a CodeMirror editor with tabs",
 	"license": "BSD",
-	"repository": "metal/steel-codeMirrorTabs",
+	"repository": "metal/steel-codemirror-tabs",
   "engines": {
     "node": ">=0.12.0",
     "npm": ">=3.0.0"

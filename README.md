@@ -1,4 +1,4 @@
-# steel-codeMirrorTabs
+# steel-codemirror-tabs
 
 Steel's component for a CodeMirror editor with tabs
 
