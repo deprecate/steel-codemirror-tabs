@@ -1,6 +1,6 @@
 'use strict';
 
-import dom from 'metal/src/dom/dom';
+import dom from 'metal-dom';
 import CodeMirrorTabs from '../src/CodeMirrorTabs';
 
 describe('CodeMirrorTabs', function() {
